@@ -1113,6 +1113,7 @@ void disable_heater()
 }
 
 void max_temp_error(uint8_t e) {
+  return;
   disable_heater();
   if(IsStopped() == false) {
     SERIAL_ERROR_START;
@@ -1139,6 +1140,7 @@ void min_temp_error(uint8_t e) {
 }
 
 void bed_max_temp_error(void) {
+return;
 #if HEATER_BED_PIN > -1
   WRITE(HEATER_BED_PIN, 0);
 #endif
