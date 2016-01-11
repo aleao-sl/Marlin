@@ -27,7 +27,7 @@
 
 //#define STRING_VERSION "1.0.2"
 
-#define STRING_VERSION_CONFIG_H __DATE__ " GUGA 26-10-2015" __TIME__ // build date and time
+#define STRING_VERSION_CONFIG_H __DATE__ " GUGA 29-10-2015" __TIME__ // build date and time
 #define STRING_CONFIG_H_AUTHOR "(none, default config)" // Who made the changes.
 
 // SERIAL_PORT selects which serial port should be used for communication with the host.
@@ -45,7 +45,8 @@
 // The following define selects which electronics board you have.
 // Please choose the name from boards.h that matches your setup
 #ifndef MOTHERBOARD
-#define MOTHERBOARD BOARD_SANGUINOLOLU_12
+//#define MOTHERBOARD BOARD_RAMPS_13_EFB
+  #define MOTHERBOARD BOARD_SANGUINOLOLU_12
 #endif
 
 // Define this to set a custom name for your generic Mendel,
@@ -337,7 +338,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
 // Travel limits after homing
 #define X_MAX_POS 200
 #define X_MIN_POS 0
-#define Y_MAX_POS 130
+#define Y_MAX_POS 160
 #define Y_MIN_POS 0
 #define Z_MAX_POS 200
 #define Z_MIN_POS 0
@@ -484,7 +485,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
 
 #define DEFAULT_AXIS_STEPS_PER_UNIT {71.93, 71.93, 4000, 835.3} // 760*1.1
 
-#define DEFAULT_MAX_FEEDRATE          {500, 500, 2.7, 25}    // (mm/sec)
+#define DEFAULT_MAX_FEEDRATE          {500, 500, 2.9, 25}    // (mm/sec)
 #define DEFAULT_MAX_ACCELERATION      {180,180,5,160}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for Skeinforge 40+, for older versions raise them a lot.
 
 #define DEFAULT_ACCELERATION          60    // X, Y, Z and E max acceleration in mm/s^2 for printing moves
